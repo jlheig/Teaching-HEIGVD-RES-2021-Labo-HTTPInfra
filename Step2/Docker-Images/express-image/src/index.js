@@ -5,37 +5,39 @@ var express = require('express');
 var app = express();
 
 app.get('/', function(req, res) {
-	res.send( generateStudents() );
+	res.send( generateRostersOfAnimals() );
 });
 
 app.listen(3000, function () {
 	console.log('Accepting HTTP requests on port 3000.');
 });
 
-function generateStudents() {
-	var numberOfStudents = chance.integer({
+function generateRostersOfAnimals() {
+	var numberOfAnimals = chance.integer({
 		min: 0,
 		max: 10
 	});
-	console.log(numberOfStudents);
-	var students = [];
-	for (var i = 0; i < numberOfStudents; i++) {
+	console.log(numberOfAnimals);
+	var animals = [];
+	var type = chance.pickone(['ocean', 'desert', 'grassland', 'forest', 'farm', 'pet', 'zoo']);
+	for (var i = 0; i < numberOfAnimals; i++) {
 		var gender = chance.gender();
 		var birthYear = chance.year({
-			min: 1986,
-			max: 1996
+			min: 2012,
+			max: 2021
 		});
-		students.push({
+		animals.push({
 			firstName: chance.first({
 				gender: gender
 			}),
-			lastName: chance.last(),
+			species: chance.animal({type: type}),
+			type: type,
 			gender: gender,
 			birthday: chance.birthday({
 				year: birthYear
 			})
 		});
 	};
-	console.log(students);
-	return students;
+	console.log(animals);
+	return animals;
 }
