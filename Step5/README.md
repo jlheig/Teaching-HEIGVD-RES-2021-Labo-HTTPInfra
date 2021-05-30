@@ -24,12 +24,13 @@ RUN a2enmod proxy proxy_http
 RUN a2ensite 000-* 001-*
 ```
 
-Once we have finished creating our dockerfile, we need to enter those 2 commands so we can build and run our container : 
+Once we have finished creating our dockerfile, we need to enter those commands so we can build and run our container : 
 
 ```
 docker build -t res/apache_rp_2 .
-docker run -d -e STATIC_APP=172.17.0.4:80 -e DYNAMIC_APP=172.17.0.3:3000 --name apache_rp_2 -p 8080:80 res/apache_rp_2
-
+docker run -d res/apache_php_2
+docker run -d res/express_students
+docker run -d -e STATIC_APP=172.17.0.2:80 -e DYNAMIC_APP=172.17.0.3:3000 -p 8080:80 res/apache_rp_2
 ```
 
 in the docker run command we added as environment variable both the static and the dynamic ip addresses as well as ports used to contact them. Our proxy-server now knows everything needed to start the entire HTTP infra.
@@ -46,7 +47,13 @@ echo "Dynamic app URL: $DYNAMIC_APP"
 php /var/apache2/templates/config-template.php > /etc/apache2/sites-available/001-reverse-proxy.conf
 ```
 
+If you ever get this error : 
 
+```
+/usr/local/bin/docker-php-entrypoint: 9: exec: apache2-foreground: not found
+```
+
+you need to open the apache2-foreground file and change all the CRLF to LF.
 
 ## Config-template
 
