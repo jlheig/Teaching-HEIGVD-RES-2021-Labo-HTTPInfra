@@ -5,7 +5,7 @@ Project to get familiar with tools to build a complete web infrastructure, we wi
 
 ## All the reports
 
-[Step 1 report](./Step 1/README.md)
+[Step 1 report](./Step%201/README.md)
 
 [Step 2 report](./Step2/README.md)
 
