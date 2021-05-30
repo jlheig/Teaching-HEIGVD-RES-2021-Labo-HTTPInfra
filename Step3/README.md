@@ -69,11 +69,11 @@ Path : C:\Windows\System32\drives\etc\hosts
 
 Here is the result if we reach the demo.res.ch/api/animals/ page :
 
- ![image-20210530204015483](/images/image1.png)
+ ![image-20210530204015483](images/image1.png)
 
 Here is the result if we reach any other page from demo.res.ch/ : 
 
-![image-20210530203943617](/images/image2.png)
+![image-20210530203943617](images/image2.png)
 
 
 

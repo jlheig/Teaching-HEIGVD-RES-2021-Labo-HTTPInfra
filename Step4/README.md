@@ -51,17 +51,17 @@ $(function() {
 
 Here is the proof that this script works : 
 
-![image-20210530204834774](/images/image1.png)
+![image-20210530204834774](images/image1.png)
 
 On this first screen we can see that after a short time, we have received many arrays, all containing animals : 
 
-![image-20210530204931624](/images/image2.png)
+![image-20210530204931624](images/image2.png)
 
 We can also see that they all have the same type, just like we wanted.
 
 Next screen shows how it is displayed on the website : 
 
-![image-20210530204747941](/images/image3.png)
+![image-20210530204747941](images/image3.png)
 
 
 
@@ -72,7 +72,7 @@ Next screen shows how it is displayed on the website :
 * jquery.js
 * yourScript.js
 
-![image-20210530204611718](/images/image4.png)
+![image-20210530204611718](images/image4.png)
 
 ## Reverse Proxy importance
 

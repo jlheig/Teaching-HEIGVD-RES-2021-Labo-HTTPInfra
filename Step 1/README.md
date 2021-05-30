@@ -28,12 +28,12 @@ docker run -p 9090:80 res/apache_php
 
 Here is the template I used for this static website : 
 
-![image-20210530194459022](/images/image1.png)
+![image-20210530194459022](images/image1.png)
 
 ## Config files in running container
 
 Here is where the config files are located in a running container : 
 
-![image-20210530195134169](/images/image2.png)
+![image-20210530195134169](images/image2.png)
 
 Here we can see that the configurations files are in the /etc/apache2 path and that we can see some default configuration file in sites-available and sites-enabled.
