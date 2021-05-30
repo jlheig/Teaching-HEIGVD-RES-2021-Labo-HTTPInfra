@@ -24,11 +24,32 @@ RUN a2enmod proxy proxy_http proxy_balancer lbmethod_byrequests
 RUN a2ensite 000-* 001-*
 ```
 
-Once we have finished creating our dockerfile, we need to enter those 2 commands so we can build and run our container : 
+Once we have finished creating our dockerfile, we need to enter those commands so we can build and run our infra : 
 
+In the apache-php-image folder
+```
+docker build -t lb-s1 .
+docker run -d lb-s1
+```
+In the apache-php-image2 folder
+```
+docker build -t lb-s2 .
+docker run -d lb-s2
+```
+In the express-image folder
+```
+docker build -t lb-d1 .
+docker run -d lb-d1
+```
+In the express-image2 folder
+```
+docker build -t lb-d2 .
+docker run -d lb-d2
+```
+In the apache-reverse-proxy folder
 ```
 docker build -t lb-reverseproxy .
-docker run -p 8080:80 -e STATIC_APP_1=172.17.0.4:80 -e STATIC_APP_2=172.17.0.5:80 -e DYNAMIC_APP_1=172.17.0.3:3000 -e DYNAMIC_APP_2=172.17.0.2:3000 lb-reverseproxy
+docker run -p 8080:80 -e STATIC_APP_1=172.17.0.2:80 -e STATIC_APP_2=172.17.0.3:80 -e DYNAMIC_APP_1=172.17.0.4:3000 -e DYNAMIC_APP_2=172.17.0.5:3000 lb-reverseproxy
 ```
 
 Here we add 4 environment variables containing the 4 ip addresses of the 2 static servers and the 2 dynamic servers.
