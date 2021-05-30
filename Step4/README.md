@@ -21,7 +21,7 @@ RUN apt-get update && apt-get install -y vim
 Before building and starting our new container, we need to start the proxy server and the dynamic server : 
 
 ```
-docker run -d res/apache_rp
+docker run -d -p 8080:80 res/apache_rp
 docker run -d res/express_students
 ```
 
