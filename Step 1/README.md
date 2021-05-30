@@ -28,7 +28,7 @@ docker run -p 9090:80 res/apache_php
 
 Here is the template I used for this static website : 
 
-![image-20210530194459022](/images/image1.png)
+![image-20210530194459022](images/image1.png)
 
 ## Config files in running container
 
