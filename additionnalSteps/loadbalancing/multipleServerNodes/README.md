@@ -87,10 +87,6 @@ Here is the content of the config-template.php file used in order to manage load
 </VirtualHost>
 ```
 
-Here is the proof that this script works : 
-
-website console proof picture
-
 ## Apache2-foreground
 
 Here are the new lines in the Apache2-foreground file : 
@@ -106,7 +102,12 @@ echo "Dynamic app 2 URL: $DYNAMIC_APP_2"
 php /var/apache2/templates/config-template.php > /etc/apache2/sites-available/001-reverse-proxy.conf
 ```
 
+If you ever get this error :
 
+```
+/usr/local/bin/docker-php-entrypoint: 9: exec: apache2-foreground: not found
+```
+you need to open the apache2-foreground file and change all the CRLF to LF.
 
 ## Modifications in the static and dynamic servers
 
