@@ -32,7 +32,14 @@ Once we have finished creating our dockerfile, we need to enter those 2 commands
 
 ```
 docker build -t res/apache_rp .
-docker run -p 8080:80 res/apache_rp
+docker run -d -p 8080:80 res/apache_rp
+```
+
+Also we need to run both the dynamic and the static server : 
+
+```
+docker run -d res/express_students
+docker run -d res/apache_php
 ```
 
 ## Config file
