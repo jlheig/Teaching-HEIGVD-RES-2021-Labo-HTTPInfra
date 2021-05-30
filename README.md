@@ -20,3 +20,10 @@ Project to get familiar with tools to build a complete web infrastructure, we wi
 ## Personnal notes
 
 This lab was really useful to master how Docker containers work and how a complete HTTP infra works with static and dynamic servers, reverse proxy servers and load balancing.
+
+You can get the docker ip addresses by using this command : 
+
+```
+docker inspect name_of_docker | grep -i ipaddress
+```
+This command will show us the IP address of the docker
