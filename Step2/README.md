@@ -93,7 +93,7 @@ We have access to only a limited amount of types for our animals :
 
 Here is the result when we try to access the dynamic server : 
 
-![image-20210530195503392](C:\Users\jean_\AppData\Roaming\Typora\typora-user-images\image-20210530195503392.png)
+![image-20210530195503392](/images/image1.png)
 
 We can see that our script rightfully generated multiple animals, gave them names, genders, birthdays and species according to their type.
 

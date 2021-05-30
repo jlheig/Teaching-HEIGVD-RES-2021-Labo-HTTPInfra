@@ -95,19 +95,19 @@ Exemple :
 
 Here we got our page from the Static 1 and the Dynamic 1 servers
 
-![image-20210530213521852](C:\Users\jean_\AppData\Roaming\Typora\typora-user-images\image-20210530213521852.png)
+![image-20210530213521852](/images/image1.png)
 
 Here we got our page from the Static 1 and the Dynamic 2 servers
 
-![image-20210530213546590](C:\Users\jean_\AppData\Roaming\Typora\typora-user-images\image-20210530213546590.png)
+![image-20210530213546590](/images/image2.png)
 
 Here we got our page from the Static 2 and the Dynamic 2 servers
 
-![image-20210530213703026](C:\Users\jean_\AppData\Roaming\Typora\typora-user-images\image-20210530213703026.png)
+![image-20210530213703026](/images/image3.png)
 
 Here we got our page from the Static 2 and the Dynamic 1 servers
 
-![image-20210530213720174](C:\Users\jean_\AppData\Roaming\Typora\typora-user-images\image-20210530213720174.png)
+![image-20210530213720174](/images/image4.png)
 
 
 
